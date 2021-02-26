@@ -40,7 +40,7 @@ public class Main {
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         Minecraft.getInstance().getItemColors().register((stack, color) -> {
-            return stack.getTag() != null && stack.getTag().contains("Color") ? stack.getTag().getInt("Color") : 0x13421772;
+            return stack.getTag() != null && stack.getTag().contains("color", 99) ? stack.getTag().getInt("color") : 0x13421772;
         }, ItemInit.COLOR_ITEM.get());
     }
 }
